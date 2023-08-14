@@ -226,7 +226,7 @@ text-decoration: underline;
     top: 0;
     left: 0;
     z-index: -1;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     object-fit: cover;
 }
@@ -248,7 +248,9 @@ text-decoration: underline;
     margin: 0.5rem;
     cursor: pointer;
 }
-
+.home .controls .vid-btn.active{
+    background: var(--orange);
+}
 
 
 
