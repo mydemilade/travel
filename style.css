@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lato:ital@1&family=Playfair+Display:wght@400;600&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lato:ital@1&family=Playfair+Display:wght@400;600&display=swap');
 *{
     font-family: 'Cinzel', serif;
     margin: 0;
@@ -13,33 +12,35 @@
   
 }
 :root{
---orange: #ffa500;
-}
-*::selection{
-    background: var(--orange);
-    color: #fff;
-}
-html{
-    font-size: 10px;
-    overflow: hidden;
-    scroll-padding-top: 6rem;
-    scroll-behavior: smooth;
-}
-section{
-    padding: 2rem 9%;
-}
+    --orange: #ffa500;
+    }
+    *::selection{
+        background: var(--orange);
+        color: #fff;
+    }
+    html{
+        font-size: 10px;
+        overflow: scroll;
+        scroll-padding-top: 6rem;
+        scroll-behavior: smooth;
+    }
+    
+
+
+
 header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background:grey;
-    display: flex;
     z-index: 1000;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     padding: 2rem 9%;
-    justify-content: space-between;
+    background: #333;
 }
+
 header .logo{
     font-size: 2.5rem;
     font-weight: bolder;
@@ -215,6 +216,7 @@ text-decoration: underline;
     text-transform: uppercase;
     font-size: 4.5rem;
     text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    margin-top: 30px;
 }
 .home .content{
     font-size: 2.5rem;
@@ -226,7 +228,7 @@ text-decoration: underline;
     top: 0;
     left: 0;
     z-index: -1;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -234,7 +236,7 @@ text-decoration: underline;
     padding: 1rem;
     border-radius: 5rem;
     position: relative;
-    top: 10rem;
+    top: 0;
     background: rgba(0, 0, 0, .7);
 }
 
@@ -250,6 +252,70 @@ text-decoration: underline;
 }
 .home .controls .vid-btn.active{
     background: var(--orange);
+}
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+.heading span{
+     font-size: 3.5rem;
+    background: rgba(255, 165, 0, .2);
+    padding: 2rem 1rem;
+    color: var(--orange);
+    border-radius: .5rem;
+
+}
+.heading span.space {
+    background: none;
+}
+.book .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.book .row .image {
+    flex: 1 1 40rem;
+}
+.book .row .image img{
+    width: 100%;
+}
+.book .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+.book .row form .inputBox{
+    padding: .5rem 0;
+}
+.book .row form .inputBox input {
+    width: 100%;
+    padding: 1rem;
+    border: 1rem solid rgba(0, 0, 0, .1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+.book .row form .inputBox input h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #666;
+}
+.packages .box-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.packages .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    border-radius: .5rem;
+}
+.packages .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 
@@ -282,13 +348,16 @@ text-decoration: underline;
 body{
     height: 300rem
 }
-@media(max-width: 1200px){
+ @media(max-width: 1200px){
    html{
     font-size: 55%;
    }
 }
  @media(max-width:991px){
     header{
+        padding: 2rem;
+    }
+    section{
         padding: 2rem;
     }
  }
@@ -317,3 +386,11 @@ body{
         background: #333;
     }
  }
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .heading span{
+        font-size: 2.5rem;
+    }
+} 
