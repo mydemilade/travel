@@ -62,6 +62,9 @@ header .navbar a:hover{
 header .icon i{
     font-size: 2.5rem;
     color: #fff;
+    justify-content: space-between;
+    margin: 10px;
+    cursor: pointer;
 }
 header .icon i:hover{
     color: var(--orange);
@@ -78,6 +81,7 @@ header .search-bar-container{
     align-items: center;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     z-index: 1001;
+   
     
 }
 header .search-bar-container.active{
@@ -172,7 +176,7 @@ text-decoration: underline;
     top: 2rem;
     right: 3rem;
     color: #fff;
-    font-size: 5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -193,7 +197,7 @@ text-decoration: underline;
 }
 #menu-bar{
     color: #fff;
-    border: 1rem solid #fff;
+
     border-radius: .5rem;
     font-size: 3rem;
     padding: .5rem 1.2rem;
@@ -508,6 +512,7 @@ body{
  @media(max-width:768px){
     #menu-bar{
         display: initial;
+
     }
     header .navbar{
         position: absolute;
@@ -531,6 +536,7 @@ body{
     }
  }
 @media(max-width:450px){
+    
     html{
         font-size: 50%;
     }
